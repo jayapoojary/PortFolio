@@ -4,9 +4,11 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
   const sendMessage = () => {
-    const whatsappURL = `https://api.whatsapp.com/send?phone=9902353097&text=${encodeURIComponent(message)}`;
+    const phoneNumber = "+919902353097";
+    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");
   };
+  
 
   return (
     <div className="contact-container">
