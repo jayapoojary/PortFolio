@@ -1,10 +1,18 @@
 import React, { useState } from "react";
+import { Info } from "lucide-react";
 const Projects = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
     <div className="projects-container">
       <h1 className="projects-title">Projects</h1>
+      <div className="flex items-center justify-center gap-2 text-gray-600 mb-3">
+  <Info size={18} />
+  <span className="text-sm">
+    Hover over the projects to see more details
+  </span>
+</div>
+
       <ul className="projects-list">
         <li
           className="project-item"
@@ -66,6 +74,10 @@ const Projects = () => {
                 Collaborated with other backend developers to optimize
                 code and troubleshoot issues.
               </p>
+              <p>
+                Achieved a performance increase of 35% by implementing server-side pagination, which optimized data loading
+                and reduced client-side processing.
+              </p>
             </div>
           )}
         </li>
@@ -88,6 +100,18 @@ const Projects = () => {
               <p>
                 Utilized React.js to build a dynamic and responsive user
                 interface, ensuring an intuitive and seamless user experience
+              </p>
+              <p>
+                Utilized React.js to build a dynamic and responsive user interface and implemented a robust backend using C#
+                and ASP.NET CORE providing efficient data processing and secure API endpoints.
+              </p>
+              <p>
+                Enhanced overall system efficiency and reduced processing time by 20% by optimizing database queries and
+                stored procedures.
+              </p>
+              <p>
+                Improved application responsiveness by 20% through code splitting and lazy loading, reducing the initial bundle
+                size and improving perceived performance.
               </p>
               <p>
                 Managed version control and collaboration using Git, ensuring
