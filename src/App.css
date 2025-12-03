@@ -72,9 +72,44 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  flex-wrap: wrap; /* 💥 IMPORTANT */
-  background-color: gray;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  color: white;
 }
+.app-container {
+  max-width: 1200px;   /* Same width for entire website */
+  margin: 0 auto;      /* Centers all content */
+  padding: 0 20px;     /* Small side spacing */
+}
+.home-container {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.navbar-subtitle {
+  font-size: 16px;
+  display: flex;
+  gap: 2px;
+  margin-top: -3px;
+  font-weight: 500;
+}
+
+.animated-letter {
+  background: linear-gradient(90deg, #ff00aa, #00d4ff, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* Floating movement animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+  100% { transform: translateY(0px); }
+}
+
 
 .navbar-links {
   display: flex;
@@ -140,20 +175,47 @@ body {
 }
 
 
+.menu-container {
+  position: relative;
+}
 
-/* Home Page Styling */
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh; /* Ensures proper alignment */
-  text-align: center;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
+.menu-button {
+  padding: 8px 14px;
+  background-color: #1e1e1e;
   color: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+.menu-button:hover {
+  background-color: #333;
+}
+/* DROPDOWN MENU */
+.menu-dropdown {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #222;
+  padding: 10px 0;
+  border-radius: 8px;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 99;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.dropdown-link:hover {
+  background-color: #444;
 }
 
 .home-title {
