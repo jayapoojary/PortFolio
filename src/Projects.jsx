@@ -19,8 +19,7 @@ const Projects = () => {
           onMouseEnter={() => setHovered("UDC")}
           onMouseLeave={() => setHovered(null)}
         >
-          User Driven Corrections (UDC) - Developed the frontend with React.js
-          and collaborated on backend integration.
+          User Driven Corrections (UDC)
           {hovered === "UDC" && (
             <div className="project-details">
               <h3 style={{ color: "green" }}>Overview:</h3>
@@ -86,8 +85,8 @@ const Projects = () => {
           onMouseEnter={() => setHovered("QEM")}
           onMouseLeave={() => setHovered(null)}
         >
-          Quantity Edit Matrix (QEM) - Built a dynamic UI for a healthcare
-          product using React.js.
+          Quantity Edit Matrix (QEM) - Built a healthcare
+          product using React.js and ASP.NET Core with C#.
           {hovered === "QEM" && (
             <div className="project-details">
               <h3 style={{color: 'green'}}>Overview:</h3>

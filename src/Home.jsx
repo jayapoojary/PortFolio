@@ -3,10 +3,10 @@ const Home = () => {
     <div className="home-container">
       <h1 className="home-title">Welcome to My Portfolio</h1>
       <p className="home-description">
-        I am a highly skilled web developer having 2.7 Years of experience in
-        HTML, CSS, React.js and MUI. I have knowledge of popular frameworks such
-        as Spring Boot and experience with REST APIs and Microservices.
+        I'm a Full Stack Developer passionate about crafting intuitive interfaces and 
+        high-performance applications using React.js on the front end and C# with ASP.NET Core on the back end.
       </p>
+
     </div>
   );
 };
