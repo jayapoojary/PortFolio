@@ -177,7 +177,13 @@ body {
 
 .menu-container {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;           /* ⭐ Prevent it from stretching full width */
+  width: auto !important;   /* ⭐ Keep it as small as needed */
 }
+
 
 .menu-button {
   padding: 8px 14px;
@@ -195,33 +201,38 @@ body {
 /* DROPDOWN MENU */
 .menu-dropdown {
   position: absolute;
-  top: 50px;           /* drop below the menu button */
-  right: 0;            /* align to right side */
-  width: 180px;        /* fixed width so it won't overflow */
-  background: #1e1e1e;
+  top: 48px;        /* exact below Menu button */
+  right: 0;         /* anchor to right edge of button */
+  background: #121212;
+  width: 180px;
   border-radius: 10px;
   padding: 10px 0;
-  box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
-  z-index: 999;        /* ensure it stays on top */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  z-index: 9999;
 }
+
+
 
 .dropdown-link {
   display: block;
-  padding: 12px 15px;
+  padding: 12px 18px;
   color: white;
   text-decoration: none;
   font-size: 1rem;
 }
 
 .dropdown-link:hover {
-  background: #333;
+  background: #2c2c2c;
 }
 @media (max-width: 600px) {
   .menu-dropdown {
-    width: 70vw;       /* use 70% of mobile width */
-    right: 10px;       /* slight padding from edge */
+    right: 0 !important;   /* stop moving to left */
+    width: 70vw;           /* responsive width */
   }
 }
+
+
+
 
 .home-title {
   font-size: 2.5rem;
